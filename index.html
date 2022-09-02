@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="pic/table.png">
+    <link rel="icon" href="pic/table.png">
+    <title>Multiplication Table</title>
+</head>
+<style>
+    body {
+  background-color: rgb(25, 165, 181);
+  text-align: center;
+}
+
+input[type=number] {
+  width: 20%;
+  background: #f1f1f1;
+  font-size: 15px;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border-radius: 25px;
+ 
+  border-color: #f1f1f1;
+}
+
+button {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 10px 12px;
+  margin: 8px 0;
+  border-radius: 25px;
+  width: 10%;
+  opacity: 0.9;
+  border-color:rgb(25, 165, 181);
+}
+
+
+form{
+    font-size: 20px;
+}
+
+</style>
+<body>
+    <h1><center><i><b><u><strong>Basit's Multiplication Table</strong></u></b></i></center></h1><hr><hr>
+    <form onsubmit="domul(); return false">
+        <b>Enter a Number:<br> <input id="num1" type="number" required placeholder="Enter Number">
+        <br><br>
+        <b></b>Enter 2nd Number:<br> <input id="num2" type="number" required placeholder="Enter number 2">
+        <br><br>
+        <button type="submit">submit</button>
+    </form>
+    <h3 id="result"></h3>
+    <script>
+        alert("Hey! Welcome to Basit's Multiplication Table")
+         function domul()
+        {
+            let firstnumber = Number(document.querySelector("#num1").value)
+            let secondnumber = +document.querySelector("#num2").value
+            let equal ="";
+            for (let i = 1 ; i <= secondnumber ; i++) {
+                equal = equal +  firstnumber + " x " + i + " = " + i * firstnumber + "<br/>";
+            }
+                document.getElementById("result").innerHTML= equal;
+        
+        }
+    </script>
+</body>
+</html>
